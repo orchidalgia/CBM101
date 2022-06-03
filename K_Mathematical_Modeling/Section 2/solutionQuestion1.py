@@ -1,1 +1,0 @@
-print("No. Because protein a does not affect the total concentration of protein b, it only converts inactive b in active b. ")
