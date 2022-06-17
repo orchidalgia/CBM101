@@ -1,4 +1,4 @@
-name: cbm101
+name: CBM101
 dependencies:
 - python>=3.6.0
 - pip
@@ -6,7 +6,7 @@ dependencies:
 - ipywidgets
 - jupyter
 - git
-- numpy
+- numpy=1.21
 - matplotlib
 - pandas
 - scikit-learn>=0.20
@@ -16,48 +16,23 @@ dependencies:
 - conda-forge::statsmodels
 - conda-forge::biopython
 - conda-forge::graphviz
-- conda-forge::dcm2niix
 - conda-forge::nxviz
 - conda-forge::umap-learn
+- conda-forge::opencv
+- conda-forge::kaggle
+- conda-forge::pandas-profiling
+- conda-forge::geoparse
 - scipy
 - seaborn
 - imageio
-# - rpy2
 - simplegeneric
-- tzlocal
 - pytables
 - openpyxl
-- anaconda::basemap
+- basemap
+- scikit-image
+- networkx
+- xlrd
+- plotly
+
 - pip:
-  - pip
-  - opencv-python
-  - scikit-image
-  - Pillow
-  - SimpleITK
-  - kaggle
-#  - graphviz
-  - networkx
-  - pandas-profiling
-  - xlrd
-  - nibabel
-  - nilearn
-  - joblib
-  - dipy
-  - eli5
-  - pdpbox
-  - wand
-  - python-louvain
-  - pyradiomics
-  - fury
-  - plotly
-#  - tensorflow==2.0.0-beta1
-  - tensorflow
-  - pydot
-  - pypdb
-  - GEOparse
   - bctpy
-  - xgboost
-  - albumentations
-#  - pandas_ml  (not compatible with pandas 0.25.0)
-# - python-igraph (needs a workaround for Windows)
-# pip install .\python_igraph-0.7.1.post6-cp37-cp37m-win_amd64.whl
