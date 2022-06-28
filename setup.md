@@ -27,10 +27,16 @@ git clone https://github.com/oercompbiomed/CBM101
 cd CBM101
 ```
 
+### Install mamba
+Mamba is a fast package-manager which we can use instead of conda. It works similarly so when using any conda commands, just replace 'conda' with 'mamba'.
+```bash
+conda install mamba
+```
+
 ### Configure the Python-environment:
 **NB!** Before executing the next command, we recommend you temporarily deactivate your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the commands below.
 ```bash
-conda env update
+mamba env update
 ```
 You should now reactivate the AV.
 
