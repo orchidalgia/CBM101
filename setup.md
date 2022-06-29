@@ -41,6 +41,7 @@ mamba env update
 You should now reactivate the AV.
 
 ### Activate the environment:
+Remember to do this every time you're gonna run anything. Everything is now installed inside this environment and can't be accessed from base environment.
 ```bash
 conda activate cbm101
 ```
@@ -68,7 +69,10 @@ You can also use [JupyterLab](https://github.com/jupyterlab/jupyterlab): `jupyte
 
 ## Update:
 The code and environment will be updated during the course. Run the following commands regularly:
-* Update code: `git pull`
+* Update code: 
+```bash
+git pull
+```
 * Update environment:
 ```bash
 conda activate cbm101
@@ -85,78 +89,5 @@ ii)
 git fetch --all
 git reset --hard origin/master
 ```
-WARNING: option ii) *will* permanently delete any personal changes you have made to any of the original files 
+**WARNING:** option ii) *will* permanently delete any personal changes you have made to any of the original files (ie. if the file name is same)
 (but not the copied ones).
-
-# Jupyter notebooks using R
-
-## Installation of libraries and necessary software
-
-These notebooks requires an R kernel to run the R scripts. We recommend to install the latest R version (https://www.r-project.org/), open an R console and then follow the instructions in https://irkernel.github.io/installation.
-
-### If you are on **Windows**,
-
-at the local CBM101 root directory, and have installed R version 3.5.1 (say), type:
-
-CBM101>`conda deactivate` <br>
-CBM101>`"C:\Program Files\R\R-3.5.1\bin\R.exe"` <br>
-
-Now you got the R command prompt `>`. Then type <br>
-
-  \> `install.packages('IRkernel')` <br>
-  \> `IRkernel::installspec()` <br>
-  \> `quit()`<br>
-
-### If you are on **Mac**,
-
-at the local CBM101 root directory, and have installed R version 3.6.0 (say), type:
-
-CBM101>`conda deactivate` <br>
-CBM101>`/usr/local/bin/R` <br>
-
-Now you got the R command prompt `>`. Then type <br>
-  \> `install.packages('IRkernel')` <br>
-  \> `IRkernel::installspec()` <br>
-  \> `quit()`<br>
-
-### If you are on **Linux**,
-
-at the local CBM101 root directory, and have installed R version 3.6.1 (say), type:
-
-  CBM101>`conda deactivate` <br>
-  CBM101>`/usr/bin/R` <br>
-
-Now you got the R command prompt `>`. Then type <br>
-    \> `install.packages('IRkernel')` <br>
-    \> `IRkernel::installspec()` <br>
-    \> `quit()`<br>
-
-
-**Then**: Go to the `E_Biostatistics` folder, and start the Jupyter notebook, i.e.
-
-CBM101/E_Biostatistics>`jupyter notebook`
-
-and you will load the `R kernel` when opening an  `.ipynb`  notebook, say `ProbsAndDistr.ipynb` in the `Probabilities-and-Distributions` folder.
-
-
-
-Using Anaconda for the R programming language in Jupyter Notebookhttps see: https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang
-
-More features and a user-friendly environment to run R scripts outside jupyter are available through [RStudio](https://www.rstudio.com)
-
-Install the necessary libraries (only needed once) by executing (shift-enter), e.g.`
-
-`install.packages("MASS", repos='http://cran.us.r-project.org')`
-
-## Edit and live-preview markdown files, e.g. `README.md`
-
-The [Atom text editor](https://atom.io)  has a [live-preview mode](https://github.com/atom/markdown-preview) for markdown files. The keyboard shortcut is CTRL+SHIFT+M.
-
-## Install Jupyter/Python on Android
-
-
-* Download Pydroid3 app from Play store (note: Pydroid uses ads)
-* Run the app (this will install Python)
-* Click on the 3 bars button (menu), then choose “PIP” (library installer), there is a search menu, typer “Jupyter” then click on Install
-* You might be asked to install the Python repository plugin if it has not been done before: do it (possible to uninstall it after installing Jupyter)
-* Once the installation of Jupyter is complete, go back to PIP, click again on the 3 bar button (menu) and run “terminal”. In the terminal type “jupyter notebook”, you’re done!
