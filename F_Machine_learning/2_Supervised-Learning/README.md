@@ -1,6 +1,6 @@
 # Supervised machine learning
 
-Supervised ML describes the way of solving problems explicitly by trying to pairing up some input data (features) to some output data (labels). The resulting moedl is essentially a mathematical function which maps from the features to the label. The major point to emphasize is the necessity to manually hand-labelling each sample (either a category or a numerical value).
+Supervised ML describes the way of solving problems explicitly by trying to pairing up some input data (features) to some output data (labels). The resulting model is essentially a mathematical function which maps from the features to the label. The major point to emphasize is the necessity to manually hand-labelling each sample (either a category or a numerical value).
 
 
 ## Training and testing your model
