@@ -23,7 +23,7 @@ conda install git
 ```
 ### Download the repository:
 ```bash
-git clone https://github.com/oercompbiomed/CBM101
+git clone https://github.com/orchidalgia/CBM101
 cd CBM101
 ```
 
