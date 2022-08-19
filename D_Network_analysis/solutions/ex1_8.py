@@ -1,4 +1,2 @@
-
-# pandas supports boolean indexing
-sick = df.loc[df.sick == True]
-sick
+for kid in sick.source:
+    kids_to_warn.discard(kid)
