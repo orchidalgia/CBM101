@@ -1,6 +1,6 @@
 
 # example solution. 
-# You are not expected to make a nice plotting function,
+# You don't need to make a plotting function/loop,
 # you can simply call plt.imshow a number of times and observe
 
 print(faces.DESCR) # this shows there are 40 classes, 10 samples per class
@@ -8,7 +8,7 @@ print(faces.target) #the targets i.e. classes
 print(np.unique(faces.target).shape) # another way to see n_classes
 
 X = faces.images
-y = faces.target
+y = faces.target # represents the test subjects in the picture
 
 fig = plt.figure(figsize=(16,5))
 idxs = [0,1,2, 11,12,13, 40,41]
