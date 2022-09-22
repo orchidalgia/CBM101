@@ -21,24 +21,25 @@ After you have successfully installed Anaconda, go through the following steps (
 ```bash
 conda install git
 ```
-### Download the repository:
+### Download the repository (downloads inside the current directory):
 ```bash
 git clone https://github.com/orchidalgia/CBM101
 cd CBM101
 ```
 
 ### Install mamba
-Mamba is a fast package-manager which we can use instead of conda. It works similarly so when using any conda commands, just replace 'conda' with 'mamba'.
+Mamba is a fast package-manager that we can use instead of conda. It works similarly so when using any conda commands, just replace 'conda' with 'mamba'.
 ```bash
 conda install mamba
 ```
+**NB** If you can't install mamba (might not work on ARM-processors/MacOS), skip this and just use conda (replace any 'mamba' with conda)
 
 ### Configure the Python-environment:
-**NB!** Before executing the next command, we recommend you temporarily deactivate your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the commands below.
 ```bash
 mamba env update
 ```
-You should now reactivate the AV.
+**NB!** If this fails, we recommend you temporarily deactivate your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the commands below.
+You should then reactivate the AV.
 
 ### Activate the environment:
 Remember to do this every time you're gonna run anything. Everything is now installed inside this environment and can't be accessed from base environment.
@@ -51,15 +52,9 @@ source ~/.bash_profile
 ```
 and try `conda activate cbm101` again. If this fails, activate the environment by typing `source activate cbm101` instead.
 
-### Install a Jupyter kernel:
+### Test your installation:
+Open jupyter:
 ```bash
-python -m ipykernel install --user --name cbm101 --display-name "CBM101"
-```
-
-### Test you installation:
-Go through the notebook `1.0-python-basics.ipynb` in the `B_Python_and_friends` directory:
-```bash
-cd B_Python_and_friends
 jupyter notebook
 ```
 (Tip: you can auto complete the name of a file/directory by pressing Tab, so you won't have to write out the 
@@ -67,7 +62,22 @@ full name.) Jupyter notebook only supports Firefox, Safari and Chrome. Unless yo
 you should do so, or alternatively you can run `jupyter notebook --no-browser` and paste the link into a supported browser.
 You can also use [JupyterLab](https://github.com/jupyterlab/jupyterlab): `jupyter lab`.
 
-## Update:
+### Activate automatic table of contents:
+1. Click Nbextensions at Jupyter menu (next to Files, Running, Cluster)
+2. Find Table of contents(2) and Enable it.
+3. Go back to Files and open any notebook (e.g B_Python_and_friends/1_pandas_basics.ipynb)
+4. Now there should be a button for ToC next to icons (the rightmost icon). 
+
+## Install the other environment:
+Later in this course we use Pycaret and we need to install it in another environment
+So in the base environment (use conda deactivate to exit cbm101):
+```bash
+conda create --name cbmPycaret
+conda activate cbmPycaret
+pip install --pre pycaret
+```
+
+## Update your local repository:
 The code and environment will be updated during the course. Run the following commands regularly:
 * Update code: 
 ```bash
@@ -76,7 +86,7 @@ git pull
 * Update environment:
 ```bash
 conda activate cbm101
-conda env update
+mamba env update
 ```
 
 ## Overwriting local changes
