@@ -1,12 +1,15 @@
-scl = 80 # scaling factor for plotting
 
-# we have to pass in a list of the 
+scl = 100 # scaling factor for plotting
+
+# save a list of the degrees {NODE1: DEGREE1, NODE2: DEGREE2...}
 d = dict(G.degree)
 
-nl = list(d.keys()) #only the nodes
+# get the nodes in same order as degrees
+nl = list(d.keys()) 
 print(nl)
 
-sz = [v*scl for v in d.values()] #only their degree (scaled up)
+# scale up the sizes
+sz = [v*scl for v in d.values()] 
 print(sz)
 
 # now we have successfully split them into 2, with matching order
