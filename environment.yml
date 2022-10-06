@@ -8,7 +8,7 @@ dependencies:
 - numpy=1.21
 - matplotlib
 - pandas
-- scikit-learn>=0.20
+- scikit-learn
 - ipykernel
 - conda-forge::jupyter_contrib_nbextensions
 - conda-forge::jupyterlab
@@ -18,7 +18,6 @@ dependencies:
 - conda-forge::nxviz
 - conda-forge::umap-learn
 - conda-forge::opencv
-- conda-forge::kaggle
 - conda-forge::pandas-profiling
 - conda-forge::geoparse
 - scipy
