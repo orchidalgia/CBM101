@@ -1,7 +1,7 @@
 # Setting up your system
 
-## Video walkthrough: 
-If you are new to computer science, we *strongly* recommend you start by watching [this video](https://www.youtube.com/watch?v=4KpD-L8-uZQ) on how to navigate the command terminal (if you haven't already). Then you can proceed to following these instrcutions on how to set up the course environment.
+## Command prompt: 
+If you are new to computer science, we *strongly* recommend you start by watching [this video](https://www.youtube.com/watch?v=4KpD-L8-uZQ) on how to navigate the command prompt (if you haven't already). Then you can proceed to following these instrcutions on how to set up the course environment.
 
 
 ## Anaconda:
