@@ -1,14 +1,14 @@
 # Setting up your system
 
-## Video walkthrough: 
-We provide a [step-by-step instruction video](https://www.youtube.com/watch?v=BF9OTam4nwk) which covers everything you need to do get started with CBM101. Also, if you are new to computer science, we *strongly* recommend you start by watching [this video](https://www.youtube.com/watch?v=4KpD-L8-uZQ) on how to navigate the command terminal.
+## Command prompt: 
+If you are new to computer science, we *strongly* recommend you start by watching [this video](https://www.youtube.com/watch?v=4KpD-L8-uZQ) on how to navigate the command prompt (if you haven't already). Then you can proceed to following these instrcutions on how to set up the course environment.
 
 
 ## Anaconda:
 We recommend installing Python via the [Anaconda Distribution](https://www.anaconda.com/download). Be sure to use the "Python 3.6.x" version or later. We will use the Conda Package Management System within the Anaconda Distribution. From the [documentation](https://conda.io/docs):
 > Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer.
 
-After the installation run `python --version` in a terminal window (in "Anaconda Prompt" if you are using Windows). If the output show "Python 3.6.x" or later (and "Anaconda") you are good to go.
+After the installation run `python --version` in a **terminal window** (or in **Anaconda Prompt** if you are using Windows). If the output show "Python 3.6.x" or later (and "Anaconda") you are good to go.
 
 ## GitHub:
 The course code is hosted on the code-sharing platform GitHub (where you now are reading this). If you do not have a GitHub account already you should make one now. We recommend that you are using the platform for you own projects during the course. https://github.com/join.
@@ -32,7 +32,7 @@ Mamba is a fast package-manager that we can use instead of conda. It works simil
 ```bash
 conda install mamba
 ```
-**NB** If you can't install mamba (might not work on ARM-processors/MacOS), skip this and just use conda (replace any 'mamba' with conda)
+**NB!** If you can't get mamba to work (might not work on ARM-processors/MacOS), skip this and just use conda (replace any 'mamba' with conda)
 
 ### Configure the Python-environment:
 ```bash
@@ -65,20 +65,27 @@ You can also use [JupyterLab](https://github.com/jupyterlab/jupyterlab): `jupyte
 ### Activate automatic table of contents:
 1. Click Nbextensions at Jupyter menu (next to Files, Running, Cluster)
 2. Find Table of contents(2) and Enable it.
-3. Go back to Files and open any notebook (e.g B_Python_and_friends/1_pandas_basics.ipynb)
-4. Now there should be a button for ToC next to icons (the rightmost icon). 
+3. Go back to Files and navigate to python_basics_notebooks (e.g. B_Python_and_friends/0_Python_basics_notebooks/0_Introduction.ipynb)
+4. Now there should be a button for ToC in the menu bar next to icons (the rightmost icon). 
+5. Now you can go through any notebooks in the folder you find helpful for you.
 
-## Install the other environment:
-Later in this course we use Pycaret and we need to install it in another environment
-So in the base environment (use conda deactivate to exit cbm101):
+
+### That's it! Now you hopefully have a working environment for the course notebooks. 
+This environment will be used in both PART1 an PART2 of this course. For PART3 you will need another environment that is installed in the next step. You can either do it now or later when you need it. In the end of this setup there is helpful commands for updating the course materials you have downloaded if (and when) they get updated here in github.
+
+--- 
+
+## Install environment for Pycaret:
+Later in this course we will use Pycaret which is a machine learning library. Installing it in this same environment will cause package conflicts which is why we will make another environment for it. This time lets create an empty environment first instead of using ready-made environment file.
 ```bash
+conda deactivate #exit current environment if it's activated
 conda create --name cbmPycaret
 conda activate cbmPycaret
 pip install --pre pycaret
 ```
 
 ## Update your local repository:
-The code and environment will be updated during the course. Run the following commands regularly:
+The code and environment might get updated during the course. To update to most recent version run the following:
 * Update code: 
 ```bash
 git pull
