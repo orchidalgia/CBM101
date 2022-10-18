@@ -30,7 +30,7 @@ cd CBM101
 ### Install mamba
 Mamba is a fast package-manager that we can use instead of conda. It works similarly so when using any conda commands, just replace 'conda' with 'mamba'.
 ```bash
-conda install mamba
+conda install mamba -c conda-forge
 ```
 **NB!** If you can't get mamba to work (might not work on ARM-processors/MacOS), skip this and just use conda (replace any 'mamba' with conda)
 
@@ -38,7 +38,7 @@ conda install mamba
 ```bash
 mamba env update
 ```
-**NB!** If this fails, we recommend you temporarily deactivate your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the commands below.
+**NB!** If this fails, we recommend you temporarily deactivate your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the command above again.
 You should then reactivate the AV.
 
 ### Activate the environment:
