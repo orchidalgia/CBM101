@@ -30,7 +30,7 @@ cd CBM101
 ### Install mamba
 Mamba is a fast package-manager that we can use instead of conda. It works similarly so when using any conda commands, just replace 'conda' with 'mamba'.
 ```bash
-conda install mamba
+conda install mamba -c conda-forge
 ```
 **NB!** If you can't get mamba to work (might not work on ARM-processors/MacOS), skip this and just use conda (replace any 'mamba' with conda)
 
