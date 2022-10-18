@@ -38,7 +38,7 @@ conda install mamba -c conda-forge
 ```bash
 mamba env update
 ```
-**NB!** If this fails, we recommend you temporarily deactivate your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the commands below.
+**NB!** If this fails, we recommend you temporarily deactivate your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the command above again.
 You should then reactivate the AV.
 
 ### Activate the environment:
