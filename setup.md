@@ -28,18 +28,29 @@ cd CBM101
 ```
 
 ### Install mamba
-Mamba is a fast package-manager that we can use instead of conda. It works similarly so when using any conda commands, just replace 'conda' with 'mamba'.
+Mamba is a fast package-manager that we can use instead of conda. It works similarly so when using any conda commands (e.g. from <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">conda-cheatsheet</a>), just replace 'conda' with 'mamba'.
 ```bash
 conda install mamba -c conda-forge
 ```
-**NB!** If you can't get mamba to work (might not work on ARM-processors/MacOS), skip this and just use conda (replace any 'mamba' with conda)
+> **NB!** If you can't get mamba to work (might not work on ARM-processors/MacOS), skip this and just use conda (replace any 'mamba' with conda)
 
 ### Configure the Python-environment:
+
 ```bash
 mamba env update
 ```
-**NB!** If this fails, we recommend you temporarily deactivate your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the command above again.
+This might take a few minutes. When it's ready, check the last outputs for errors. Warnings are fine, but if it throws an error the environment will not work
+> **NB!** If this fails, there's a few things you could try:
+> 1) If you're a Mac user you can remove the empty conda environment by running `conda env remove -n cbm101` and then try the folloing:
+```
+CONDA_SUBDIR=osx-64 conda create -n CBM101
+conda activate CBM101
+conda config --env --set subdir osx-64
+mamba env update
+```
+> 2) You can try temporarily deactivating your antivirus (AV) software. Some software conflates python.exe with a virus (IDP.generic), and will corrupt your install. If your AV gives this warning, delete your environment (`conda remove --name cbm101 --all --yes`), deactivate the AV and run the command above again.
 You should then reactivate the AV.
+
 
 ### Activate the environment:
 Remember to do this every time you're gonna run anything. Everything is now installed inside this environment and can't be accessed from base environment.
